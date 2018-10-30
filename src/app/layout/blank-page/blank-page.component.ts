@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from '../../shared/services/question.service';
 
 @Component({
     selector: 'app-blank-page',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./blank-page.component.scss']
 })
 export class BlankPageComponent implements OnInit {
-    constructor() {}
+    questions: any[];
 
-    ngOnInit() {}
+    constructor(service: QuestionService) {
+        this.questions = service.getQuestions();
+    }
+    ngOnInit() { }
 }

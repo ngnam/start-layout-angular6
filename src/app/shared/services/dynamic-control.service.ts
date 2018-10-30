@@ -5,9 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DynamicControlBase } from '../base';
 
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class DynamicControlService {
 
     constructor() {
